@@ -6,8 +6,8 @@ Welcome to Armagan's Awesome Terraform Modules for Ansible! This repository cont
 
 ## 📂 Sub-modules
 
-* ansible_inventory 🖥️
-* ansible_playbook 📸
+* ansible-inventory 🖥️
+* ansible-playbook 📸
 
 ## 🚀 Usage
 
