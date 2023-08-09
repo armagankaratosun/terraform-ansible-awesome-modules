@@ -32,14 +32,5 @@ resource "null_resource" "run_ansible_playbooks" {
     working_dir = var.ansible_files_path
 
   }
-
-  provisioner "local-exec" {
-    command = "echo 'ansible_output_${count.index} = \"Output for ${var.ansible_playbook_files[count.index]}\"' >> ${var.ansible_files_path}/ansible_output.tf"
-  }
 }
 
-output "ansible_playbook_outputs" {
-  value = tomap({
-    for idx, _ in var.ansible_playbook_files : idx => "Output for ${var.ansible_playbook_files[idx]}"
-  })
-}
