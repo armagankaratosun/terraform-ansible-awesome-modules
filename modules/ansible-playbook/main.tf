@@ -28,7 +28,7 @@ resource "null_resource" "run_ansible_playbooks" {
   count = length(var.ansible_playbook_files)
 
   provisioner "local-exec" {
-    command = "ansible-playbook -i ${var.ansible_files_path}/${var.ansible_inventory_file} -c local ${var.ansible_files_path}/${var.ansible_playbook_files[count.index]}"
+    command = "ansible-playbook -i ${var.ansible_inventory_file} ${var.ansible_playbook_files[count.index]}"
     working_dir = var.ansible_files_path
 
   }
