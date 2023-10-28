@@ -13,3 +13,21 @@ variable server_ips {
    type = list
    description = "ip addresses of the vms"
 }
+
+### SSH Proxy Variables ###
+
+variable "ansible_use_ssh_proxy" {
+  description = "boolean to determine if SSH proxy should be used"
+  type        = bool
+  default     = false
+}
+
+variable "ansible_ssh_proxy_user" {
+  description = "ssh proxy username"
+  type        = string
+}
+
+variable "ansible_ssh_proxy_ip" {
+  description = "ssh proxy ip address"
+  type        = string
+}
