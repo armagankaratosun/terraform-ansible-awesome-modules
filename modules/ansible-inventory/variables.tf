@@ -35,6 +35,6 @@ variable "ansible_ssh_proxy_ip" {
 variable "ansible_ssh_proxy_port" {
   description = "ssh proxy port"
   type        = string
-  default     = '22'
+  default     = "22"
 }
 
