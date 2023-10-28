@@ -3,6 +3,10 @@ resource "local_file" "ansible_inventory" {
     { 
         server_ips =  (var.server_ips)
         ansible_inventory_group = (var.ansible_inventory_group_name)
+
+        ansible_use_ssh_proxy = (var.ansible_use_ssh_proxy)
+        ansible_ssh_proxy_user = (var.ansible_ssh_proxy_user)
+        ansible_ssh_proxy_ip = (var.ansible_ssh_proxy_ip)
     } 
     ) 
     filename = (var.ansible_inventory_path)
