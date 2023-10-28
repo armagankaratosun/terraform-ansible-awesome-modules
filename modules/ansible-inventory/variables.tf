@@ -31,3 +31,10 @@ variable "ansible_ssh_proxy_ip" {
   description = "ssh proxy ip address"
   type        = string
 }
+
+variable "ansible_ssh_proxy_port" {
+  description = "ssh proxy port"
+  type        = string
+  default     = '22'
+}
+
